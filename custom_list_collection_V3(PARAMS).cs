@@ -90,6 +90,18 @@ public class Program
         list.Add(1);
         list.Add(1);
         list.Add(1);
+        list3.Add(3);
+        list3.Add(3);
+        list3.Add(3);
+        list3.Add(3);
+        list3.Add(3);
+        list3.Add(3);
+        list3.Add(3);
+        list3.Add(3);
+        list3.Add(3);
+        list3.Add(3);
+        list3.Add(3);
+        list3.Add(3);
        System.Console.WriteLine($"{list.Length()}"); 
        System.Console.WriteLine($"{list2.Length()}");
        System.Console.WriteLine($"{list3.Length()}");
