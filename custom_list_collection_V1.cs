@@ -1,11 +1,12 @@
 using System;
 using System.ComponentModel;
+using System.Net.Quic;
 using System.Runtime.CompilerServices;
 
 //custom list datatype 
 //under the hood, its an array managed dynamically 
-//to a list i must be able to add elements dynamically
-//the list is self has to manage its length capacity bu
+//dynamically managed list
+//list self manages the capacity
 
 public class CustomList
 {
@@ -24,11 +25,12 @@ public class CustomList
 
    //the user can allocate a capacity to the list it custom way
    public CustomList(int capacity)
-    {
+   
+       {
         //we use the capacity parameter 
         _ints= new int[capacity]; 
         _count=0; 
-    }
+    } 
     //the user can also have memebers to instance
     public CustomList(int[] numbers)
     {
@@ -82,10 +84,12 @@ public class Program
     public static void Main(string[] args)
     {
         CustomList list= new CustomList(10); 
+        CustomList list2= new CustomList(new int[] {1, 3, 4, 5});
         list.Add(1);
         list.Add(1);
         list.Add(1);
         list.Add(1);
        System.Console.WriteLine($"{list.Length()}"); 
+       System.Console.WriteLine($"{list2.Length()}");
     }
 }
