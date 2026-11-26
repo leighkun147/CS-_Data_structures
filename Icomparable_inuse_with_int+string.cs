@@ -5,7 +5,8 @@
 using System.Runtime.InteropServices;
 
 //accepting D-type? with the ? 
-
+//here we will use the fact that strings and ints are data types/ classes which implement the icomparable
+//interface to our advanatage to make the method smaller
 public class Student:IComparable<Student>
 {
 
