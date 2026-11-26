@@ -125,7 +125,6 @@ public class Program
        System.Console.WriteLine($"{list.Length()}"); 
        System.Console.WriteLine($"{list2.Length()}");
        System.Console.WriteLine($"{list3.Length()}");
-        System.Console.WriteLine($"{list3[14]}, {list3[2]}");
-
+       System.Console.WriteLine($"{list3[14]}, {list3[2]}");
     }
 }
