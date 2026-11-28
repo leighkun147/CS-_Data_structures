@@ -1,3 +1,6 @@
+//used Nullable<float> instead of float 
+//used Icomparable generic and we added T accordingly
+
 public interface Icomparablegeneric<T>
 {
     int CompareMeWith(T obj); 

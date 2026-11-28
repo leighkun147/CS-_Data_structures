@@ -1,0 +1,182 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 790" width="1120" height="790" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    
+    <filter id="shadow" x="-5%" y="-5%" width="112%" height="112%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.08" />
+    </filter>
+
+    
+    <marker id="hollow-triangle" viewBox="0 0 14 14" refX="13" refY="7" markerWidth="12" markerHeight="12" orient="auto-start-reverse">
+      <polygon points="1,1 13,7 1,13" fill="#ffffff" stroke="#334155" stroke-width="1.6" />
+    </marker>
+
+    
+    <marker id="open-arrow" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+      <polyline points="2,1 11,6 2,11" fill="none" stroke="#475569" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+    </marker>
+  </defs>
+
+  
+  <rect width="1120" height="790" fill="#f8fafc" />
+
+  
+  <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
+    <circle cx="2" cy="2" r="1" fill="#e2e8f0" />
+  </pattern>
+  <rect width="1120" height="790" fill="url(#dots)" />
+
+  
+  <text x="40" y="42" font-size="20" font-weight="700" fill="#0f172a">CustomList — Custom Collection &amp; Enumeration UML Class Diagram</text>
+  <text x="40" y="64" font-size="13" fill="#64748b">Architecture of ICustomGetEnumerable, ICustomEnumerator, ICustomList, and CustomList</text>
+
+  
+  <g transform="translate(740, 22)">
+    <rect width="340" height="52" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" />
+    <line x1="16" y1="18" x2="54" y2="18" stroke="#334155" stroke-width="1.6" marker-end="url(#hollow-triangle)" />
+    <text x="62" y="22" font-size="11.5" fill="#334155">Extends (Interface Inheritance)</text>
+
+    <line x1="16" y1="38" x2="54" y2="38" stroke="#334155" stroke-width="1.6" stroke-dasharray="5,4" marker-end="url(#hollow-triangle)" />
+    <text x="62" y="42" font-size="11.5" fill="#334155">Implements</text>
+
+    <line x1="205" y1="28" x2="243" y2="28" stroke="#475569" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#open-arrow)" />
+    <text x="251" y="32" font-size="11.5" fill="#334155">Uses / Creates</text>
+  </g>
+
+  
+  
+  
+  <g transform="translate(80, 105)" filter="url(#shadow)">
+    <rect width="330" height="104" rx="8" fill="#ffffff" stroke="#0284c7" stroke-width="1.8" />
+    <path d="M0,8 a8,8 0 0,1 8,-8 h314 a8,8 0 0,1 8,8 v44 h-330 z" fill="#e0f2fe" />
+    <line x1="0" y1="52" x2="330" y2="52" stroke="#0284c7" stroke-width="1.4" />
+    <text x="165" y="21" text-anchor="middle" font-size="11.5" font-style="italic" fill="#0369a1">&lt;&gt;</text>
+    <text x="165" y="41" text-anchor="middle" font-size="15" font-weight="700" fill="#0c4a6e">ICustomGetEnumerable</text>
+    <text x="16" y="78" font-family="Consolas, Monaco, monospace" font-size="12.5" fill="#1e293b">+ GetCustomEnumerator() : ICustomEnumerator</text>
+  </g>
+
+  
+  
+  
+  <g transform="translate(670, 95)" filter="url(#shadow)">
+    <rect width="330" height="134" rx="8" fill="#ffffff" stroke="#0284c7" stroke-width="1.8" />
+    <path d="M0,8 a8,8 0 0,1 8,-8 h314 a8,8 0 0,1 8,8 v44 h-330 z" fill="#e0f2fe" />
+    <line x1="0" y1="52" x2="330" y2="52" stroke="#0284c7" stroke-width="1.4" />
+    <text x="165" y="21" text-anchor="middle" font-size="11.5" font-style="italic" fill="#0369a1">&lt;&gt;</text>
+    <text x="165" y="41" text-anchor="middle" font-size="15" font-weight="700" fill="#0c4a6e">ICustomEnumerator</text>
+    <text x="16" y="75" font-family="Consolas, Monaco, monospace" font-size="12.5" fill="#1e293b">+ Current : T { get }</text>
+    <text x="16" y="97" font-family="Consolas, Monaco, monospace" font-size="12.5" fill="#1e293b">+ MoveNext() : bool</text>
+    <text x="16" y="119" font-family="Consolas, Monaco, monospace" font-size="12.5" fill="#1e293b">+ Reset() : void</text>
+  </g>
+
+  
+  
+  
+  <g transform="translate(80, 270)" filter="url(#shadow)">
+    <rect width="330" height="134" rx="8" fill="#ffffff" stroke="#0284c7" stroke-width="1.8" />
+    <path d="M0,8 a8,8 0 0,1 8,-8 h314 a8,8 0 0,1 8,8 v44 h-330 z" fill="#e0f2fe" />
+    <line x1="0" y1="52" x2="330" y2="52" stroke="#0284c7" stroke-width="1.4" />
+    <text x="165" y="21" text-anchor="middle" font-size="11.5" font-style="italic" fill="#0369a1">&lt;&gt;</text>
+    <text x="165" y="41" text-anchor="middle" font-size="15" font-weight="700" fill="#0c4a6e">ICustomList</text>
+    <text x="16" y="75" font-family="Consolas, Monaco, monospace" font-size="12.5" fill="#1e293b">+ Count : int { get }</text>
+    <text x="16" y="97" font-family="Consolas, Monaco, monospace" font-size="12.5" fill="#1e293b">+ this[index : int] : T { get; set; }</text>
+    <text x="16" y="119" font-family="Consolas, Monaco, monospace" font-size="12.5" fill="#1e293b">+ Add(item : T) : void</text>
+  </g>
+
+  
+  
+  
+  <g transform="translate(55, 475)" filter="url(#shadow)">
+    <rect width="380" height="275" rx="8" fill="#ffffff" stroke="#334155" stroke-width="1.8" />
+    <path d="M0,8 a8,8 0 0,1 8,-8 h364 a8,8 0 0,1 8,8 v34 h-380 z" fill="#f1f5f9" />
+    <line x1="0" y1="42" x2="380" y2="42" stroke="#334155" stroke-width="1.4" />
+    <text x="190" y="27" text-anchor="middle" font-size="15.5" font-weight="700" fill="#0f172a">CustomList</text>
+
+    
+    <text x="16" y="63" font-family="Consolas, Monaco, monospace" font-size="12.5" fill="#334155">- _items : T[]</text>
+    <text x="16" y="83" font-family="Consolas, Monaco, monospace" font-size="12.5" fill="#334155">- _count : int</text>
+    <line x1="0" y1="95" x2="380" y2="95" stroke="#cbd5e1" stroke-width="1.2" />
+
+    
+    <text x="16" y="115" font-family="Consolas, Monaco, monospace" font-size="12.5" fill="#1e293b">+ Count : int { get }</text>
+    <text x="16" y="135" font-family="Consolas, Monaco, monospace" font-size="12.5" fill="#1e293b">+ this[index : int] : T { get; set; }</text>
+    <text x="16" y="155" font-family="Consolas, Monaco, monospace" font-size="12.5" fill="#1e293b">+ CustomList()</text>
+    <text x="16" y="175" font-family="Consolas, Monaco, monospace" font-size="12.5" fill="#1e293b">+ CustomList(capacity : int)</text>
+    <text x="16" y="195" font-family="Consolas, Monaco, monospace" font-size="12.5" fill="#1e293b">+ CustomList(params initialItems : T[])</text>
+    <text x="16" y="215" font-family="Consolas, Monaco, monospace" font-size="12.5" fill="#1e293b">+ Add(item : T) : void</text>
+    <text x="16" y="235" font-family="Consolas, Monaco, monospace" font-size="12.5" fill="#475569">- Resize() : void</text>
+    <text x="16" y="254" font-family="Consolas, Monaco, monospace" font-size="12.5" font-weight="600" fill="#0369a1">+ GetCustomEnumerator() : ICustomEnumerator</text>
+    <text x="16" y="270" font-family="Consolas, Monaco, monospace" font-size="12.5" font-weight="600" fill="#0369a1">+ GetEnumerator() : CustomEnumerator</text>
+  </g>
+
+  
+  
+  
+  <g transform="translate(655, 315)" filter="url(#shadow)">
+    <rect width="360" height="215" rx="8" fill="#ffffff" stroke="#334155" stroke-width="1.8" />
+    <path d="M0,8 a8,8 0 0,1 8,-8 h344 a8,8 0 0,1 8,8 v34 h-360 z" fill="#f1f5f9" />
+    <line x1="0" y1="42" x2="360" y2="42" stroke="#334155" stroke-width="1.4" />
+    <text x="180" y="27" text-anchor="middle" font-size="15.5" font-weight="700" fill="#0f172a">CustomEnumerator</text>
+
+    
+    <text x="16" y="63" font-family="Consolas, Monaco, monospace" font-size="12.5" fill="#334155">- _items : T[]</text>
+    <text x="16" y="83" font-family="Consolas, Monaco, monospace" font-size="12.5" fill="#334155">- _count : int</text>
+    <text x="16" y="103" font-family="Consolas, Monaco, monospace" font-size="12.5" fill="#334155">- _position : int = -1</text>
+    <line x1="0" y1="115" x2="360" y2="115" stroke="#cbd5e1" stroke-width="1.2" />
+
+    
+    <text x="16" y="136" font-family="Consolas, Monaco, monospace" font-size="12.5" fill="#1e293b">+ CustomEnumerator(items : T[], count : int)</text>
+    <text x="16" y="158" font-family="Consolas, Monaco, monospace" font-size="12.5" fill="#1e293b">+ Current : T { get }</text>
+    <text x="16" y="180" font-family="Consolas, Monaco, monospace" font-size="12.5" fill="#1e293b">+ MoveNext() : bool</text>
+    <text x="16" y="202" font-family="Consolas, Monaco, monospace" font-size="12.5" fill="#1e293b">+ Reset() : void</text>
+  </g>
+
+  
+  
+  
+  <g transform="translate(685, 625)" filter="url(#shadow)">
+    <rect width="300" height="92" rx="8" fill="#ffffff" stroke="#334155" stroke-width="1.8" />
+    <path d="M0,8 a8,8 0 0,1 8,-8 h284 a8,8 0 0,1 8,8 v34 h-300 z" fill="#f1f5f9" />
+    <line x1="0" y1="42" x2="300" y2="42" stroke="#334155" stroke-width="1.4" />
+    <text x="150" y="27" text-anchor="middle" font-size="15.5" font-weight="700" fill="#0f172a">Program</text>
+    <text x="16" y="71" font-family="Consolas, Monaco, monospace" font-size="12.5" text-decoration="underline" fill="#1e293b">+ Main(args : string[]) : void</text>
+  </g>
+
+  
+  
+  
+
+  
+  <line x1="245" y1="270" x2="245" y2="211" stroke="#334155" stroke-width="1.7" marker-end="url(#hollow-triangle)" />
+  <rect x="253" y="229" width="56" height="20" rx="4" fill="#f8fafc" />
+  <text x="257" y="243" font-size="11.5" font-weight="600" fill="#475569">extends</text>
+
+  
+  <line x1="245" y1="475" x2="245" y2="406" stroke="#334155" stroke-width="1.7" stroke-dasharray="6,4" marker-end="url(#hollow-triangle)" />
+  <rect x="253" y="429" width="76" height="20" rx="4" fill="#f8fafc" />
+  <text x="257" y="443" font-size="11.5" font-weight="600" fill="#475569">implements</text>
+
+  
+  <line x1="835" y1="315" x2="835" y2="231" stroke="#334155" stroke-width="1.7" stroke-dasharray="6,4" marker-end="url(#hollow-triangle)" />
+  <rect x="843" y="262" width="76" height="20" rx="4" fill="#f8fafc" />
+  <text x="847" y="276" font-size="11.5" font-weight="600" fill="#475569">implements</text>
+
+  
+  <line x1="410" y1="157" x2="668" y2="157" stroke="#475569" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#open-arrow)" />
+  <rect x="505" y="136" width="66" height="18" rx="4" fill="#f8fafc" />
+  <text x="538" y="149" text-anchor="middle" font-size="11.5" font-style="italic" fill="#475569">returns</text>
+
+  
+  <path d="M 435,515 L 545,515 L 545,425 L 653,425" fill="none" stroke="#0284c7" stroke-width="1.6" stroke-dasharray="5,4" marker-end="url(#open-arrow)" />
+  <rect x="480" y="458" width="128" height="20" rx="4" fill="#e0f2fe" />
+  <text x="544" y="472" text-anchor="middle" font-size="11.5" font-weight="600" fill="#0369a1">creates &amp; returns</text>
+
+  
+  <line x1="685" y1="671" x2="437" y2="671" stroke="#475569" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#open-arrow)" />
+  <rect x="512" y="650" width="96" height="18" rx="4" fill="#f8fafc" />
+  <text x="560" y="663" text-anchor="middle" font-size="11.5" font-style="italic" fill="#475569">instantiates</text>
+
+  
+  <line x1="835" y1="625" x2="835" y2="532" stroke="#475569" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#open-arrow)" />
+  <rect x="843" y="568" width="165" height="20" rx="4" fill="#f8fafc" />
+  <text x="847" y="582" font-size="11.5" font-style="italic" fill="#475569">traverses (foreach / manual)</text>
+</svg>

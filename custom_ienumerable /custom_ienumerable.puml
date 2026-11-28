@@ -1,0 +1,58 @@
+@startuml
+skinparam classAttributeIconSize 0
+skinparam linetype ortho
+
+interface "ICustomGetEnumerable<T>" as IGetEnum {
+  + GetCustomEnumerator() : ICustomEnumerator<T>
+}
+
+interface "ICustomEnumerator<T>" as IEnum {
+  + Current : T <<get>>
+  + MoveNext() : bool
+  + Reset() : void
+}
+
+interface "ICustomList<T>" as IList {
+  + Count : int <<get>>
+  + this[index : int] : T <<get, set>>
+  + Add(item : T) : void
+}
+
+class "CustomEnumerator<T>" as EnumImpl {
+  - _items : T[]
+  - _count : int
+  - _position : int
+  + CustomEnumerator(items : T[], count : int)
+  + Current : T <<get>>
+  + MoveNext() : bool
+  + Reset() : void
+}
+
+class "CustomList<T>" as ListImpl {
+  - _items : T[]
+  - _count : int
+  + Count : int <<get>>
+  + this[index : int] : T <<get, set>>
+  + CustomList()
+  + CustomList(capacity : int)
+  + CustomList(params initialItems : T[])
+  + Add(item : T) : void
+  - Resize() : void
+  + GetCustomEnumerator() : ICustomEnumerator<T>
+  + GetEnumerator() : CustomEnumerator<T>
+}
+
+class Program {
+  + {static} Main(args : string[]) : void
+}
+
+IGetEnum <|-- IList : extends
+IList <|.. ListImpl : implements
+IEnum <|.. EnumImpl : implements
+
+ListImpl ..> EnumImpl : creates / returns >
+IGetEnum ..> IEnum : returns >
+Program ..> IList : uses >
+Program ..> IEnum : uses >
+Program ..> ListImpl : instantiates >
+@enduml
